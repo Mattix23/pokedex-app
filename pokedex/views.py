@@ -9,4 +9,7 @@ class HomeView(TemplateView):
     template_name = 'pokedex/welcome.html'
     extra_context = {'today': datetime.today()}
 
-# make login page view here
+
+class AuthorizedView(LoginRequiredMixin, TemplateView):
+    template_name = 'pokedex/authorized.html'
+    login_url = '/admin'
