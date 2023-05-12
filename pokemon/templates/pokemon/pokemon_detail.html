@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <h1>{{ name }}</h1>
+
+    {% if sprite_url %}
+    <img src="{{ sprite_front }}" alt="{{ name }} front sprite" />
+    <img src="{{ sprite_back }}" alt="{{ name }} back sprite" />
+    {% endif %}
+
+    <p>
+      Types: {{ types|join:', ' }}<br />
+      Height: {{ height }} m<br />
+      Weight: {{ weight }} kg
+    </p>
+  </body>
+</html>
