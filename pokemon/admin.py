@@ -4,7 +4,7 @@ from . import models
 
 
 class PokemonAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ('name', 'text')
 
 
 admin.site.register(models.Pokemon, PokemonAdmin)

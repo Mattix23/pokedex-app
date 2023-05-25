@@ -1,8 +1,14 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, DetailView
+from django.views.generic import CreateView, TemplateView, DetailView
 
 import requests
 
+from .models import Pokemon
+
+class PokemonCreateView(CreateView):
+    model = Pokemon
+    fields = ['name', 'types', 'text']
+    success_url = 'my-pokemon'
 
 class PokemonSearchView(TemplateView):
     template_name = 'pokemon/pokemon_search.html'
@@ -39,3 +45,8 @@ def pokemon_detail(request):
         return render(request, 'pokemon/pokemon_detail.html', context=context)
     except:
         return render(request, 'pokemon/error.html', {})
+
+
+def pokemon_list(request):
+    all_pokemon = Pokemon.objects.all()
+    return render(request, 'pokemon/pokemon_list.html', {'pokemon': all_pokemon})

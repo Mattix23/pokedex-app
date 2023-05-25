@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <h1>Add your favorite Pokemon!</h1>
+    <form action="{% url 'favorite-pokemon' %}" method="POST">{% csrf_token %}
+        {{ form }}
+        <button type="submit" class="fav-poke-btn">Submit</button>
+
+    </form>
+    
+    
+    
+    <a class="home-btn" href="{%url 'pokedex_home'%}">Back to Home</a>
+  </body>
+</html>
