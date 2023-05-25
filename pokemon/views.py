@@ -49,4 +49,9 @@ def pokemon_detail(request):
 
 def pokemon_list(request):
     all_pokemon = Pokemon.objects.all()
-    return render(request, 'pokemon/pokemon_list.html', {'pokemon': all_pokemon})
+    return render(request, 'pokemon/pokemon_list.html', {'pokemons': all_pokemon})
+
+
+def single_pokemon_detail(request, pk):
+    pokemon = Pokemon.objects.get(pk=pk)
+    return render(request, 'pokemon/pokemon_single.html', {'pokemon': pokemon})
