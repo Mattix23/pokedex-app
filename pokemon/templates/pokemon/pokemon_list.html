@@ -1,0 +1,11 @@
+<html>
+
+<h1> These are my favorite Pokemon!</h1>
+<ul>
+    {% for pokemon in pokemons %}
+    <li>{{pokemon.name}}</li>
+    <li>{{pokemon.type}}</li>
+    <li>{{pokemon.text}}</li>
+    {% endfor %}
+</ul>
+</html>
