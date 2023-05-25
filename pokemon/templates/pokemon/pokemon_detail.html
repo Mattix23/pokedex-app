@@ -1,13 +1,22 @@
+{% load static %}
+
 <html>
-  <body>
-    <h1>{{ name }}</h1>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+  <body class="body-border">
+    <h1 class="poke-name">Name: {{ name }}</h1>
 
     {% if sprite_url %}
-    <img src="{{ sprite_front }}" alt="{{ name }} front sprite" />
-    <img src="{{ sprite_back }}" alt="{{ name }} back sprite" />
+    <img class="sprite-front" src="{{ sprite_front }}" alt="{{ name }} front sprite" />
+    <img class="sprite-back" src="{{ sprite_back }}" alt="{{ name }} back sprite" />
     {% endif %}
 
-    <p>
+    <p class="pokemon-det">
       Types: {{ types|join:', ' }}<br />
       Height: {{ height }} m<br />
       Weight: {{ weight }} kg

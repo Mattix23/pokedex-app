@@ -1,0 +1,94 @@
+.pokemon-det {
+background-color: rgb(255, 255, 255);
+display: block;
+text-align: center;
+
+}
+
+.poke-name {
+border-style: dotted;
+border-color: rgb(14, 61, 234);
+border-width: 4;
+}
+
+.body-border {
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.sprite-front {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border-top-width: 2px;
+    border-right-width: 4px;
+    border-bottom-width: 6px;
+    border-left-width: 8px;
+    border-top-style: solid;
+    border-right-style: dotted;
+    border-bottom-style: dashed;
+    border-left-style: groove;
+    border-top-color: #ee0505;
+    border-right-color: #0000e6;
+    border-bottom-color: #02ce57;
+    border-left-color: #e7ee18;
+    width: 200px;
+}
+
+.sprite-back {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border-top-width: 2px;
+    border-right-width: 4px;
+    border-bottom-width: 6px;
+    border-left-width: 8px;
+    border-top-style: solid;
+    border-right-style: dotted;
+    border-bottom-style: dashed;
+    border-left-style: groove;
+    border-top-color: #ee0505;
+    border-right-color: #0000e6;
+    border-bottom-color: #02ce57;
+    border-left-color: #e7ee18;
+    width: 200px;
+}
+
+.back-btn:hover {
+    transition-duration: 0.4s;
+    background-color: #f91010; /* Green */
+    color: white;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.home-btn:hover {
+    transition-duration: 0.4s;
+    background-color: #0707eb; /* Green */
+    color: white;
+    border-radius: 8px;
+}
+
+.submit-btn {
+    background-color: #6dea19;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.label-form {
+    border-top-color: #ee0505;
+    border-right-color: #0000e6;
+    border-bottom-color: #02ce57;
+    border-left-color: #e7ee18;
+    width: 200px;
+}
+
+.search-header {
+    border-style: dotted;
+    border-color: rgb(14, 61, 234);
+    border-width: 4;
+}
