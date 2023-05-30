@@ -1,7 +1,7 @@
 <html>
   <body>
     <h1>Add your favorite Pokemon!</h1>
-    <form action="{% url 'favorite-pokemon' %}" method="POST">{% csrf_token %}
+    <form method="POST">{% csrf_token %}
         {{ form }}
         <button type="submit" class="fav-poke-btn">Submit</button>
 
@@ -10,5 +10,6 @@
     
     
     <a class="home-btn" href="{%url 'pokedex_home'%}">Back to Home</a>
+    <a class="fav-btn" href="{%url 'pokemon_list'%}">Back to your list</a>
   </body>
 </html>

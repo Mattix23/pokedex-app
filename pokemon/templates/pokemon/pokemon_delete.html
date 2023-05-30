@@ -1,0 +1,21 @@
+{% load static %}
+
+
+<html>
+    <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+        <body>
+          <h1>Ayo?</h1>
+          <form method="POST">{% csrf_token %}
+            <p>Are you sure you want to delete "{{pokemon.name}}"?</p>
+            <p>This action cannot be undone.</p> 
+            
+            <input type="submit"value="Confirm"/>
+      
+          </form>
+        </body>
+</html>

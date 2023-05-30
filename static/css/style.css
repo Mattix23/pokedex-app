@@ -99,3 +99,15 @@ border-width: 4;
     color: white;
     border-radius: 8px;
 }
+
+.list-header {
+    border-style: dotted;
+    border-color: #f91010;
+}
+
+.fav-btn:hover {
+    transition-duration: 0.4s;
+    background-color: #07eb40;
+    color: white;
+    border-radius: 8px;
+}

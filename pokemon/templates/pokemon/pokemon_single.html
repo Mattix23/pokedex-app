@@ -1,8 +1,20 @@
+{% load static %}
+
+
 <html>
-  <h1>{{pokemon.name}}</h1>
+    <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  <h1 class="poke-name">{{pokemon.name}}</h1>
   <p>{{pokemon.type}}</p>
   <p>{{pokemon.text}}</p>
 
   <a class="back-btn" href="{%url 'pokemon_search'%}">Back to Search</a>
   <a class="home-btn" href="{%url 'pokedex_home'%}">Back to Home</a>
+  <a class="fav-btn" href="{%url 'pokemon_list'%}">Back to your list</a>
+  <a href="{%url 'pokemon_delete' pk=pokemon.id %}" class="btn btn-danger">Delete</a>
+  <a href="{%url 'pokemon_update' pk=pokemon.id %}">Edit</a>
 </html>

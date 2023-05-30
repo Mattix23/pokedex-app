@@ -1,14 +1,20 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, TemplateView, DetailView, UpdateView
+from django.views.generic import CreateView, TemplateView, UpdateView
+from django.views.generic.edit import DeleteView
 
 import requests
 
 from .forms import PokemonForm
 from .models import Pokemon
 
+class PokemonDeleteView(DeleteView):
+    model = Pokemon
+    success_url = "/"
+    template_name = 'pokemon/pokemon_delete.html'
+
 class PokemonUpdateView(UpdateView):
     model = Pokemon
-    success_url = "pokemon-list"
+    success_url = "/"
     form_class = PokemonForm
 
 class PokemonCreateView(CreateView):
