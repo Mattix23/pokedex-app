@@ -1,14 +1,20 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, TemplateView, DetailView
+from django.views.generic import CreateView, TemplateView, DetailView, UpdateView
 
 import requests
 
+from .forms import PokemonForm
 from .models import Pokemon
+
+class PokemonUpdateView(UpdateView):
+    model = Pokemon
+    success_url = "pokemon-list"
+    form_class = PokemonForm
 
 class PokemonCreateView(CreateView):
     model = Pokemon
-    fields = ['name', 'types', 'text']
-    success_url = 'my-pokemon'
+    success_url = 'pokemon-list'
+    form_class = PokemonForm
 
 class PokemonSearchView(TemplateView):
     template_name = 'pokemon/pokemon_search.html'
