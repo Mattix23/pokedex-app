@@ -1,11 +1,27 @@
-<html>
+{% load static %}
 
-<h1> These are my favorite Pokemon!</h1>
-<ul>
+
+<html>
+      <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  <h1 class="list-header">These are your favorite Pokemon!</h1>
+  <div class="row row-cols3 g-2">
     {% for pokemon in pokemons %}
-    <li>{{pokemon.name}}</li>
-    {% endfor %}
-</ul>
-<a class="back-btn" href="{%url 'pokemon_search'%}">Back to Search</a>
-<a class="home-btn" href="{%url 'pokedex_home'%}">Back to Home</a>
+    <div class="col">
+      <div class="p-3 border">
+        <a
+          href="{% url 'single_pokemon_detail' pk=pokemon.id %}"
+          class="text-dark text-decoraiton-non"
+          ><h3>{{pokemon.name}}</h3></a
+        >
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <a class="back-btn" href="{%url 'pokemon_search'%}">Back to Search</a>
+  <a class="home-btn" href="{%url 'pokedex_home'%}">Back to Home</a>
 </html>
