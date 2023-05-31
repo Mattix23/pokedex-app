@@ -1,15 +1,32 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'css/style.css' %}"
+  />
     <title>Pokedex App</title>
   </head>
   <body>
+    <nav class="navbar-1">
+      <div class="ms-auto">
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="btn-logout">LOGOUT</a>
+        {% else %}
+        <a href="{% url 'login' %}" class="btn-login">LOGIN</a>
+        <a href="{% url 'signup' %}" class="btn-login">SIGN UP</a>
+        {% endif %} 
+      </div>
+    </nav>
     <h1>Welcome to the Pokedex App</h1>
     <p>Today is {{today}}</p>
-    <a class="next-pg-btn" href="{%url 'pokemon_search'%}"
+    <a class="search-btn" href="{%url 'pokemon_search'%}"
       >Click here to begin your search</a
     >
     <a class="list-btn" href="{%url 'pokemon_list'%}"

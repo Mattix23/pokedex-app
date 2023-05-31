@@ -111,3 +111,30 @@ border-width: 4;
     color: white;
     border-radius: 8px;
 }
+
+.signup {
+    text-align: left;
+    margin: 0;
+    width: 600px;
+}
+
+.navbar-1 {
+    background-color: black;
+    width: auto;
+
+}
+
+.search-btn:hover {
+    transition-duration: 0.4s;
+    background-color: #0707eb;
+    color: white;
+    border-radius: 8px;
+}
+
+.btn-logout {
+    color: white;
+}
+
+.btn-login {
+    color: white;
+}
