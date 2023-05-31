@@ -1,0 +1,17 @@
+{% load static %}
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+  <form method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-secondary"/>
+
+  </form>
+  <a class="back-btn" href="{%url 'pokemon_search'%}">Back to Search</a>
+</html>
