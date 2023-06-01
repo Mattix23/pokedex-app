@@ -142,5 +142,5 @@ CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://pokedex-app-production-37e6.up.railway.app'
+    'https://mute-place-production.up.railway.app/'
 ]
