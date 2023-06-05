@@ -9,6 +9,7 @@ gunicorn==20.1.0
 idna==3.4
 pipreqs==0.4.13
 pytz==2023.3
+python-decouple==3.8
 requests==2.31.0
 sqlparse==0.4.4
 urllib3==2.0.2
